@@ -4,4 +4,4 @@ WORKDIR /webcrawler
 
 COPY starter/webcrawler .
 
-CMD ["mvn" ,  "test" , "-Dtest=ConfigurationLoaderTest"]
+CMD ["mvn" ,  "test" , "-Dtest=CrawlResultWriterTest"]
