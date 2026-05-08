@@ -43,14 +43,17 @@ public final class WebCrawlerMain {
             var path = Path.of(config.getResultPath());
             resultWriter.write(path);
         } else {
-            var stdout = new OutputStreamWriter(System.out);
-            resultWriter.write(stdout);
+            try (var stdout = new OutputStreamWriter(System.out)) {
+                resultWriter.write(stdout);
+            }
         }
         if (!config.getProfileOutputPath().isEmpty()) {
             var path = Path.of(config.getProfileOutputPath());
             profiler.writeData(path);
         } else {
-            profiler.writeData(new OutputStreamWriter(System.out));
+            try (var stdout = new OutputStreamWriter(System.out)) {
+                profiler.writeData(stdout);
+            }
         }
     }
 

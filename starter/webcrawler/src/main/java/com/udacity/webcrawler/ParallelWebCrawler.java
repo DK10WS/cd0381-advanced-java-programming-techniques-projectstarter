@@ -124,7 +124,7 @@ final class ParallelWebCrawler implements WebCrawler {
             if (clock.instant().isAfter(deadline)) {
                 return;
             }
-            for (Pattern pattern : ignoredUrls) {
+            for (var pattern : ignoredUrls) {
                 if (pattern.matcher(url).matches()) {
                     return;
                 }
