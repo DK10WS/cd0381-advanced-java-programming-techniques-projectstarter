@@ -42,7 +42,7 @@ public final class CrawlResultWriter {
             )
         ) {
             write(writer);
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

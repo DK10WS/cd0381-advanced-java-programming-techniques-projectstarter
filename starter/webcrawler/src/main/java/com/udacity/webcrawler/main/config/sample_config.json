@@ -1,5 +1,5 @@
 {
-  "startPages": ["https://openlibrary.org/"],
+  "startPages": ["https://github.com/"],
   "ignoredUrls": [
     "https://openlibrary.org/about.*",
     "https://openlibrary.org/people.*"
@@ -8,6 +8,6 @@
   "parallelism": 4,
   "maxDepth": 2,
   "timeoutSeconds": 5,
-  "popularWordCount": 5,
+  "popularWordCount": 10,
   "profileOutputPath": "profileData.txt"
 }
